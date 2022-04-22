@@ -1,0 +1,35 @@
+<div class="rbody-right">
+    <div class="rbody1">
+        <p class="bold">Car</p>
+        <i class="fa fa-angle-right bold"></i>
+        <p>List Car</p>
+    </div>
+    <div class="rbody2">
+        <p class="bold">List Car</p>
+        <button onclick="location.href='/cars/create'" type="button" class="bold">+ Add New Car</button>
+    </div>
+    <div class="rbody3">
+        <button>All</button>
+        <button>Small</button>
+        <button>Medium</button>
+        <button>Large</button>
+    </div>
+    <div class="rbody4">
+        <% for(var i=0; i < data.length; i++) { %>
+        <div class="car">
+            <div class="car-align">
+                <img src="images/<%= data[i].foto %>" alt="">
+            </div>
+            <p><%= data[i].nama %></p>
+            <p class="bold">Rp. <%= data[i].tarif %></p>
+            <p class="thin"><i class="fa fa-clock"></i>updated at <%= data[i].updatedAt.toLocaleString() %></p>
+            <p></p>
+            <div class="car-button">
+                <button class="delete-button"><i class="fa-regular fa-trash-can"></i> Delete</button>
+                <button class="edit-button"><i class="fa fa-pen"></i> Edit</button>
+            </div>
+            <p></p>
+        </div>
+        <% } %>
+    </div>
+</div>

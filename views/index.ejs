@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/b9333d3049.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="layout">
+        <div class="left-body">
+            <div class="side-item">
+                <div class="box-home">
+    
+                </div>
+            </div>
+            <div class="side-item">
+                <i class="fas fa-home"></i>
+                <p>Dashboard</p>
+            </div>
+            <div class="side-item">
+                <i class="fa-solid fa-truck-pickup"></i>
+                <p>Cars</p>
+            </div>
+            <div class="side-item">
+                
+            </div>
+        </div>
+        <div class="right-body">
+            <div class="navbar">
+                <div class="nav-left">
+                    <div class="box-logo"></div>
+                    <i class="fa-solid fa-bars fa-2xl"></i>
+                </div>
+                <div class="nav-right">
+                    <input type="search" placeholder="Search" results="0">
+                    <button type="button">Search</button>
+                    <div class="user-icon"><p>u</p></div>
+                    <p class="username">lorem ipsum</p>
+                    <i class="fa fa-angle-down"></i>
+                </div>
+            </div>
+            <div class="rbody-main">
+                <div class="rbody-left">
+                    <p>CARS</p>
+                    <p>List Cars</p>
+                </div>
+                <%- include('component/listCars') %>
+            </div>
+        </div>
+    </div>
+ 
+</body>
+</html>
