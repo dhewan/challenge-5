@@ -28,11 +28,11 @@ module.exports = class {
     static getAllCar(req, res, next) {
         cars.findAll()
          .then((result) => {
-            //  res.status(201).send({
-            //      status: 200,
-            //      message: 'All Car',
-            //      data: result,
-            //  })
+        //      res.status(201).send({
+        //          status: 200,
+        //          message: 'All Car',
+        //          data: result,
+        //      })
             res.render("index",{data:result})
          })
          .catch((err) => {
@@ -94,4 +94,23 @@ module.exports = class {
               res.status(500).send(err)
               })
           }
+          static ukuranCar(req, res, next) {
+        
+            cars.findAll({ where: req.query })
+                 .then((result) => {
+                  
+                    //  res.status(201).send({
+                    //      status: 200,
+                    //      message: 'Data Car ditemukan!',
+                    //      data: result,
+                    //  })
+       
+                   res.render('index',{data:result});
+                 })
+                 .catch((err) => {
+                     res.status(500).send(err)
+                 })
+       
+               
+               }
 }

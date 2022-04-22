@@ -9,5 +9,6 @@ router.post("/create", car.addCAR);
 router.put("/update/:id", car.updateCar);
 router.delete("/delete/:id", car.deleteCar);
 router.get("/search", car.getCar);
+router.get("/size", car.ukuranCar);
 
 module.exports = router;
