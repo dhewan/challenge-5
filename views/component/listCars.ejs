@@ -25,11 +25,8 @@
             <p class="thin"><i class="fa fa-clock"></i>updated at <%= data[i].updatedAt.toLocaleString() %></p>
             <p></p>
             <div class="car-button">
-                <form action="/cars/delete/<%= data[i].id %>">
-                    <button class="delete-button"><i class="fa-regular fa-trash-can"></i> Delete</button>
-                </form>
-          
-                <button onclick="location.href='/cars/index-updateCars'" class="edit-button"><i class="fa fa-pen"></i> Edit</button>
+                <button onclick="location.href='/cars/delete/<%= data[i].id %>'" class="delete-button"><i class="fa-regular fa-trash-can"></i> Delete</button>
+                <button onclick="location.href='/cars/edit/<%=data[i].id%>'" class="edit-button"><i class="fa fa-pen"></i> Edit</button>
             </div>
             <p></p>
         </div>

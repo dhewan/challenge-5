@@ -28,11 +28,11 @@ module.exports = class {
     static getAllCar(req, res, next) {
         cars.findAll()
          .then((result) => {
-        //      res.status(201).send({
-        //          status: 200,
-        //          message: 'All Car',
-        //          data: result,
-        //      })
+            //  res.status(201).send({
+            //      status: 200,
+            //      message: 'All Car',
+            //      data: result,
+            //  })
             res.render("index",{data:result})
          })
          .catch((err) => {
@@ -112,5 +112,15 @@ module.exports = class {
                  })
        
                
+               }
+               static editCar(req, res, next) {
+                cars.findByPk(req.params.id).then((result) => { 
+                    console.log(result)
+                    res.render("index-updateCars", {data:result})
+                    })
+                    .catch((err) => {
+                        res.status(500).send(err)
+                    })
+            
                }
 }

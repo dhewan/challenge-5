@@ -10,7 +10,7 @@
     <div class="add-rbody3">
         <div class="add-form">
             <p>Nama*</p>
-            <input value="<%= data.ukuran%>" type="text">
+            <input value="<%= data.nama%>" type="text">
         </div>
         <div class="add-form">
             <p>Sewa Per Hari*</p>
@@ -27,11 +27,11 @@
         </div>
         <div class="add-form">
             <p>Foto*</p>
-            <input value="<%= data.foto%>" type="input">
+            <input value="images/<%= data.foto%>" type="input">
         </div>
     </div>
     <div class="add-rbody4">
         <button onclick="location.href='/cars'" class="add-cancel-button bold">Cancel</button>
-        <button class="add-save-button bold">Save</button>
+        <button type="submit" class="add-save-button bold">Save</button>
     </div>
 </div>

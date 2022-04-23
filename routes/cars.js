@@ -10,5 +10,5 @@ router.put("/update/:id", car.updateCar);
 router.delete("/delete/:id", car.deleteCar);
 router.get("/search", car.getCar);
 router.get("/size", car.ukuranCar);
-
+router.get("/edit/:id", car.editCar);
 module.exports = router;
